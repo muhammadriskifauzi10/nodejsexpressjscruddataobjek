@@ -1,0 +1,16 @@
+table * {
+  text-align: center;
+  vertical-align: middle;
+}
+.btn-same-width {
+  width: 80px;
+}
+
+table * {
+  text-align: center !important;
+}
+
+/* Datatable */
+.dt-buttons {
+  margin-top: 30px;
+}

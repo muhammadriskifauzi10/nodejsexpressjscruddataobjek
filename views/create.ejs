@@ -1,0 +1,64 @@
+<div class="container">
+      <div class="row mt-5">
+            <div class="col-lg-6 m-auto">
+                  <a href="/">Kembali</a>
+                  <% if(msg.length !==0) { %>
+                        <div class="alert alert-success mt-2">
+                              <%= msg %>
+                        </div>
+                        <% } %>
+                              <form action="/create" autocomplete="off" method="POST" class="mt-2">
+                                    <!-- Input nama -->
+                                    <div class="mb-2">
+                                          <label for="nama">Nama</label>
+                                          <input type="text" class="form-control" name="nama" id="name"
+                                                value="<%= old.nama %>">
+                                          <% if (msgError.nama) { %>
+                                                <p style="color: red">
+                                                      <%= msgError.nama.msg %>
+                                                </p>
+                                                <% } %>
+                                    </div>
+
+                                    <!-- Input jurusan -->
+                                    <div class="mb-2">
+                                          <label for="jurusan">Jurusan</label>
+                                          <select class="form-select" name="jurusan" id="jurusan">
+                                                <option>Pilih Jurusan</option>
+                                                <option value="Sistem Informasi">Sistem Informasi</option>
+                                                <option value="Sistem Komputer">Sistem Komputer</option>
+                                          </select>
+                                    </div>
+
+                                    <!-- Input email -->
+                                    <div class="mb-2">
+                                          <label for="email">Email</label>
+                                          <input type="text" class="form-control" name="email" id="email"
+                                                value="<%= old.email %>">
+                                          <% if (msgError.email) { %>
+                                                <p style="color: red">
+                                                      <%= msgError.email.msg %>
+                                                </p>
+                                                <% } %>
+                                    </div>
+
+                                    <!-- Input no hp -->
+                                    <div class="mb-2">
+                                          <label for="no_hp">NO HP</label>
+                                          <input type="number" class="form-control" name="no_hp" id="no_hp"
+                                                value="<%= old.no_hp %>">
+                                          <% if (msgError.no_hp) { %>
+                                                <p style="color: red">
+                                                      <%= msgError.no_hp.msg %>
+                                                </p>
+                                                <% } %>
+                                    </div>
+
+                                    <!-- Submit -->
+                                    <div>
+                                          <button type="submit" class="btn btn-primary">Simpan</button>
+                                    </div>
+                              </form>
+            </div>
+      </div>
+</div>

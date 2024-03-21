@@ -1,0 +1,44 @@
+<div class="container">
+      <div class="row mt-5">
+            <div class="col-lg-10 m-auto">
+
+                  <a href="create" class="d-block mb-3">Buat Data</a>
+
+                  <div class="row">
+                        <div class="col-lg-4 mb-3">
+                              <label for="major">Pilih Jurusan</label>
+                              <select name="major" id="major" class="form-select">
+                                    <option selected>Pilih Jurusan</option>
+                                    <option value="Sistem Informasi">Sistem Informasi</option>
+                                    <option value="Sistem Komputer">Sistem Komputer</option>
+                              </select>
+                        </div>
+                        <div class="col-lg-4 mb-3">
+                              <label for="minDate">Min Date</label>
+                              <input type="date" name="minDate" id="minDate" class="form-control"
+                                    value="<%= formatDate %>">
+                        </div>
+                        <div class="col-lg-4 mb-3">
+                              <label for="maxDate">Max Date</label>
+                              <input type="date" name="maxDate" id="maxDate" class="form-control"
+                                    value="<%= formatDate %>">
+                        </div>
+                  </div>
+                  
+                  <table class="table table-striped" id="datatableData" style="width: 100%;">
+                        <thead>
+                              <tr>
+                                    <th>No</th>
+                                    <th>Nama</th>
+                                    <th>Jurusan</th>
+                                    <th>Email</th>
+                                    <th>No HP</th>
+                                    <th>Aksi</th>
+                              </tr>
+                        </thead>
+                  </table>
+            </div>
+      </div>
+</div>
+
+<script src="js/home.js"></script>
